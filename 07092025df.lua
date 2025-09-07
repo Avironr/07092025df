@@ -1,6 +1,6 @@
-world = {"JLGVV", "JLGVB", "JLGBW", "JLGBR"}
-worldID = "0"
-TotalWorld = 4
+world = {"JLGBO", "JLGBL"}
+worldID = "2E2"
+TotalWorld = 2
 
 StoragePlatform = "YMVIQ"
 StoragePlatformID = "2E2"
@@ -387,3 +387,4 @@ end
         
 sendPacket(2,"action|input\n|text|`2Auto Dirt Farm `4Done")
 Sleeps(5)
+
