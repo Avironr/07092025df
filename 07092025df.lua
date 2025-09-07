@@ -1,6 +1,6 @@
-world = {"JLGNW", "JLGNT"}
+world = {"JLGVV", "JLGVB", "JLGBW", "JLGBR"}
 worldID = "0"
-TotalWorld = 2
+TotalWorld = 4
 
 StoragePlatform = "YMVIQ"
 StoragePlatformID = "2E2"
@@ -321,10 +321,11 @@ function bar_72626_cathy_michie_92749()
     end
 end
 
-AddHook("OnVarList","drop",function(variant,netid)
-    if variant[1]:find("drop?") or variant[1]:find("trash?") then
+AddHook("OnVarList", "Hookk", function(list, ns)
+    if list[0] == "OnDialogRequest" and (list[1]:find("drop_item") or list[1]:find("trash_item") or list[1]:find("|showfriend|")) then
         return true
     end
+    return false
 end)
 
 isAlreadyFound = false
@@ -387,5 +388,3 @@ end
         
 sendPacket(2,"action|input\n|text|`2Auto Dirt Farm `4Done")
 Sleeps(5)
-
-
